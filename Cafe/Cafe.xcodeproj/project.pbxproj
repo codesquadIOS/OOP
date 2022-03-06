@@ -20,7 +20,7 @@
 		E01F104427D47C5500EA62C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01F104327D47C5500EA62C0 /* Assets.xcassets */; };
 		E01F104727D47C5500EA62C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01F104527D47C5500EA62C0 /* LaunchScreen.storyboard */; };
 		F5D0F78E27D48B2100A52F7C /* Orderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F78D27D48B2100A52F7C /* Orderable.swift */; };
-		F5D0F79027D48C2800A52F7C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F78F27D48C2800A52F7C /* Menu.swift */; };
+		F5D0F79027D48C2800A52F7C /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F78F27D48C2800A52F7C /* Coffee.swift */; };
 		F5D0F79227D49DE300A52F7C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F79127D49DE300A52F7C /* Order.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		E01F104627D47C5500EA62C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E01F104827D47C5500EA62C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D0F78D27D48B2100A52F7C /* Orderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orderable.swift; sourceTree = "<group>"; };
-		F5D0F78F27D48C2800A52F7C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		F5D0F78F27D48C2800A52F7C /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		F5D0F79127D49DE300A52F7C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 		1E80BE1227D485EB004F77C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F5D0F78F27D48C2800A52F7C /* Menu.swift */,
+				F5D0F78F27D48C2800A52F7C /* Coffee.swift */,
 				1E80BE1027D485E5004F77C1 /* Cafe.swift */,
 				1E80BE1327D4861B004F77C1 /* Customer.swift */,
 				1E80BE1527D48635004F77C1 /* Cashier.swift */,
@@ -178,7 +178,7 @@
 				F5D0F78E27D48B2100A52F7C /* Orderable.swift in Sources */,
 				E01F103F27D47C5400EA62C0 /* CafeViewController.swift in Sources */,
 				1E80BE1627D48635004F77C1 /* Cashier.swift in Sources */,
-				F5D0F79027D48C2800A52F7C /* Menu.swift in Sources */,
+				F5D0F79027D48C2800A52F7C /* Coffee.swift in Sources */,
 				F5D0F79227D49DE300A52F7C /* Order.swift in Sources */,
 				1E80BE1827D48639004F77C1 /* Manager.swift in Sources */,
 				D037747127D49282008D0934 /* BaristaStatus.swift in Sources */,

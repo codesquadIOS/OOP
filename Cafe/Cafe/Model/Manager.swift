@@ -9,9 +9,8 @@ import Foundation
 
 class Manager {
     private var barista: Barista
-    private var menu: [Menu]
     
-    func receiveMenu(menu: Menu) {
+    func receiveCoffee(type: Coffee) {
         self.menu.append(menu)
     }
     
