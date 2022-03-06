@@ -9,6 +9,21 @@ import UIKit
 
 class CafeViewController: UIViewController {
 
+    let guestView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemGray6
+        return view
+    }()
+    
+    let guestName: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.text = "손님"
+        return label
+    }()
+    
     let buyStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -51,9 +66,20 @@ class CafeViewController: UIViewController {
 
     func layout() {
         let safeAreaGuide = self.view.safeAreaLayoutGuide
-        self.view.addSubview(buyStackView)
-        buyStackView.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 10).isActive = true
-        buyStackView.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 10).isActive = true
+        self.view.addSubview(guestView)
+        self.guestView.addSubview(guestName)
+        self.guestView.addSubview(buyStackView)
+        
+        guestView.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 10).isActive = true
+        guestView.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 10).isActive = true
+        guestView.rightAnchor.constraint(equalTo: buyStackView.rightAnchor, constant: 10).isActive = true
+        guestView.bottomAnchor.constraint(equalTo: buyStackView.bottomAnchor, constant: 10).isActive = true
+        
+        guestName.topAnchor.constraint(equalTo: guestView.topAnchor, constant: 10).isActive = true
+        guestName.leftAnchor.constraint(equalTo: guestView.leftAnchor, constant: 10).isActive = true
+        
+        buyStackView.topAnchor.constraint(equalTo: guestName.bottomAnchor, constant: 10).isActive = true
+        buyStackView.leftAnchor.constraint(equalTo: guestView.leftAnchor, constant: 10).isActive = true
         buyStackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         buyStackView.addArrangedSubview(americanoButton)
