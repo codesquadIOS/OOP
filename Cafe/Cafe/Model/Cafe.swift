@@ -9,20 +9,18 @@ import Foundation
 
 class Cafe {
     private static var orderId = 0
-    private let cashier = Cashier()
-    private var baristas = [Barista]()
+    private let cashier: Cashier
+    private let baristas: [Barista]
     private var currentOrder: Order?
     private var totalOrder: [Int:Order] = [:]
     
-    init() {
+    init(cashier: Cashier, baristas: [Barista]) {
+        self.cashier = cashier
+        self.baristas = baristas
+        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.processOrders()
         }
-    }
-    
-    ///카페에서 일할 바리스타 추가
-    func add(barista: Barista) {
-        baristas.append(barista)
     }
     
     ///사용자가 주문 넣은 커피 추가
