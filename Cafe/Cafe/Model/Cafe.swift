@@ -29,6 +29,8 @@ class Cafe {
             }
         }
         
+        orders.removeAll()
+        
         var complateCoffee = [Coffee]()
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
