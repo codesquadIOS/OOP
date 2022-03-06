@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74322D627D48BF000445645 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74322D527D48BF000445645 /* Beverage.swift */; };
+		B74322D827D48C3D00445645 /* Barista.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74322D727D48C3D00445645 /* Barista.swift */; };
 		E01F103B27D47C5400EA62C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F103A27D47C5400EA62C0 /* AppDelegate.swift */; };
 		E01F103D27D47C5400EA62C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F103C27D47C5400EA62C0 /* SceneDelegate.swift */; };
 		E01F103F27D47C5400EA62C0 /* CafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F103E27D47C5400EA62C0 /* CafeViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B74322D527D48BF000445645 /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		B74322D727D48C3D00445645 /* Barista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barista.swift; sourceTree = "<group>"; };
 		E01F103727D47C5400EA62C0 /* Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01F103A27D47C5400EA62C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01F103C27D47C5400EA62C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B74322D427D48BD600445645 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B74322D527D48BF000445645 /* Beverage.swift */,
+				B74322D727D48C3D00445645 /* Barista.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E01F102E27D47C5400EA62C0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		E01F103927D47C5400EA62C0 /* Cafe */ = {
 			isa = PBXGroup;
 			children = (
+				B74322D427D48BD600445645 /* Model */,
 				E01F104E27D47F2700EA62C0 /* View */,
 				E01F103A27D47C5400EA62C0 /* AppDelegate.swift */,
 				E01F103C27D47C5400EA62C0 /* SceneDelegate.swift */,
@@ -147,7 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01F103F27D47C5400EA62C0 /* CafeViewController.swift in Sources */,
+				B74322D827D48C3D00445645 /* Barista.swift in Sources */,
 				E01F103B27D47C5400EA62C0 /* AppDelegate.swift in Sources */,
+				B74322D627D48BF000445645 /* Beverage.swift in Sources */,
 				E01F103D27D47C5400EA62C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
