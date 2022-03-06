@@ -8,10 +8,13 @@
 import Foundation
 
 class Cashier {
+    private var manager: Manager
     
     func returnChange(menu: Menu, amount: Int) -> Int{
         return amount - menu.price
     }
     
-    // func 커피반환
+    func 메뉴전달(menu: Menu, to manager: Manager) {
+        self.manager.receiveMenu(menu: menu)
+    }
 }
