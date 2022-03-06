@@ -9,28 +9,34 @@ import Foundation
 import UIKit
 struct Barista {
     
-    private var recievedOrder : Order?
-    private var completedOrder : Order?
+    private var recievedOrder : Order
+    private var completedOrder : Order
     
     mutating func makeBeverage () -> Beverage {
-        if let targetBeverage = recievedOrder?.popFirstBeverage() {
-            self.completedOrder?.appendBeverage(beverage: targetBeverage)
-        }
-        self.recievedOrder?.loopBeverages(event: { Beverage in
-            <#code#>
-        })
+        let targetBeverage = recievedOrder.popFirstBeverage()
+        return targetBeverage
     }
     
     mutating func recieveOrder(order : Order) {
         self.recievedOrder = order
     }
     
-    
-    
+    mutating func processOrder() -> Order {
+        while !self.recievedOrder.isEmpty {
+            let madeBeverage = makeBeverage()
+            completedOrder.appendBeverage(beverage: madeBeverage)
+        }
+        return self.completedOrder
+    }
 }
 
 struct Order {
     private var beverages : [Beverage]
+    
+    var isEmpty: Bool {
+        self.beverages.isEmpty
+    }
+    
     
     mutating func popFirstBeverage() -> Beverage {
         return self.beverages.removeFirst()
@@ -40,10 +46,10 @@ struct Order {
         self.beverages.append(beverage)
     }
     
-    mutating func loopBeverages(event: (Beverage) -> Void) {
-        for beverage in beverages {
-            event(beverage)
-            
-        }
-    }
+//    mutating func loopBeverages(event: (Beverage) -> Void) {
+//        for beverage in beverages {
+//            event(beverage)
+//
+//        }
+//    }
 }
