@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 struct Barista {
     
     private var recievedOrder : Order?
@@ -15,6 +16,9 @@ struct Barista {
         if let targetBeverage = recievedOrder?.popFirstBeverage() {
             self.completedOrder?.appendBeverage(beverage: targetBeverage)
         }
+        self.recievedOrder?.loopBeverages(event: { Beverage in
+            <#code#>
+        })
     }
     
     mutating func recieveOrder(order : Order) {
@@ -26,7 +30,7 @@ struct Barista {
 }
 
 struct Order {
-    var beverages : [Beverage]
+    private var beverages : [Beverage]
     
     mutating func popFirstBeverage() -> Beverage {
         return self.beverages.removeFirst()
@@ -36,4 +40,10 @@ struct Order {
         self.beverages.append(beverage)
     }
     
+    mutating func loopBeverages(event: (Beverage) -> Void) {
+        for beverage in beverages {
+            event(beverage)
+            
+        }
+    }
 }
