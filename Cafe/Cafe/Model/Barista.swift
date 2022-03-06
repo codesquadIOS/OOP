@@ -8,23 +8,23 @@
 import Foundation
 
 class Barista {
-    private var orderCoffee = [Coffee]()
+    private var orderCoffee = [OrderCoffee]()
     private var processTimer: Float = 0
     
     var delayTime: Float {
-        orderCoffee.reduce(0){ $0 + $1.makingTime}
+        orderCoffee.reduce(0){ $0 + $1.coffee.makingTime}
     }
     
-    func add(coffee: Coffee) {
+    func add(coffee: OrderCoffee) {
         orderCoffee.append(coffee)
     }
     
-    func working() -> Coffee? {
+    func working() -> OrderCoffee? {
         guard let makingCoffee = orderCoffee.first else {
             return nil
         }
         
-        if processTimer >= makingCoffee.makingTime {
+        if processTimer >= makingCoffee.coffee.makingTime {
             processTimer = 0
             return orderCoffee.removeFirst()
         }

@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct Coffee {
+struct Coffee: CustomStringConvertible {
     let name: String
     let price: Int
     let makingTime: Float
+    
+    var description: String {
+        "\(name)"
+    }
 }

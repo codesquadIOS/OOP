@@ -9,7 +9,7 @@ import Foundation
 
 class Cashier {
     
-    func working(orders: [Coffee]) {
-        //계산처리   
+    func working(order: Order) {
+        //계산처리.               
     }
 }
