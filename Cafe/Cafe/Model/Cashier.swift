@@ -1,9 +1,9 @@
 import Foundation
 
-struct Cashier {
-    var receivedOrder: Order
+class Cashier {
+    var receivedOrder: Order = Order()
     
-    mutating func receiveOrder(beverage: Beverage) {
+    func receiveOrder(beverage: Beverage) {
         self.receivedOrder.appendBeverage(beverage: beverage)
     }
     
