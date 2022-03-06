@@ -11,7 +11,7 @@ class Cashier {
     private var manager: Manager
     
     func returnChange(menu: Menu, amount: Int) -> Int{
-        return amount - menu.price
+        return amount - menu.Coffe
     }
     
     func 메뉴전달(menu: Menu, to manager: Manager) {

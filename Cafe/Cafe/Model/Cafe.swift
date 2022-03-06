@@ -20,7 +20,8 @@ class Cafe {
         self.cashier = Cashier()
     }
     
-    
+    let order = customer.makeOrder()
+    self.cashier.메뉴전달(menu: , to: <#T##Manager#>)
     
     
     
