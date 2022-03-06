@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E80BE1127D485E5004F77C1 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80BE1027D485E5004F77C1 /* Cafe.swift */; };
+		1E80BE1427D4861B004F77C1 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80BE1327D4861B004F77C1 /* Customer.swift */; };
+		1E80BE1627D48635004F77C1 /* Cashier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80BE1527D48635004F77C1 /* Cashier.swift */; };
+		1E80BE1827D48639004F77C1 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80BE1727D48639004F77C1 /* Manager.swift */; };
+		1E80BE1A27D4863E004F77C1 /* Barista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80BE1927D4863E004F77C1 /* Barista.swift */; };
+		1E80BE1C27D4878C004F77C1 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80BE1B27D4878C004F77C1 /* Coffee.swift */; };
 		E01F103B27D47C5400EA62C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F103A27D47C5400EA62C0 /* AppDelegate.swift */; };
 		E01F103D27D47C5400EA62C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F103C27D47C5400EA62C0 /* SceneDelegate.swift */; };
 		E01F103F27D47C5400EA62C0 /* CafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F103E27D47C5400EA62C0 /* CafeViewController.swift */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E80BE1027D485E5004F77C1 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		1E80BE1327D4861B004F77C1 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		1E80BE1527D48635004F77C1 /* Cashier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cashier.swift; sourceTree = "<group>"; };
+		1E80BE1727D48639004F77C1 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		1E80BE1927D4863E004F77C1 /* Barista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barista.swift; sourceTree = "<group>"; };
+		1E80BE1B27D4878C004F77C1 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		E01F103727D47C5400EA62C0 /* Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01F103A27D47C5400EA62C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01F103C27D47C5400EA62C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E80BE1227D485EB004F77C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E80BE1B27D4878C004F77C1 /* Coffee.swift */,
+				1E80BE1027D485E5004F77C1 /* Cafe.swift */,
+				1E80BE1327D4861B004F77C1 /* Customer.swift */,
+				1E80BE1527D48635004F77C1 /* Cashier.swift */,
+				1E80BE1727D48639004F77C1 /* Manager.swift */,
+				1E80BE1927D4863E004F77C1 /* Barista.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E01F102E27D47C5400EA62C0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,23 +81,16 @@
 		E01F103927D47C5400EA62C0 /* Cafe */ = {
 			isa = PBXGroup;
 			children = (
-				E01F104E27D47F2700EA62C0 /* View */,
 				E01F103A27D47C5400EA62C0 /* AppDelegate.swift */,
 				E01F103C27D47C5400EA62C0 /* SceneDelegate.swift */,
 				E01F103E27D47C5400EA62C0 /* CafeViewController.swift */,
+				1E80BE1227D485EB004F77C1 /* Model */,
 				E01F104027D47C5400EA62C0 /* Main.storyboard */,
 				E01F104327D47C5500EA62C0 /* Assets.xcassets */,
 				E01F104527D47C5500EA62C0 /* LaunchScreen.storyboard */,
 				E01F104827D47C5500EA62C0 /* Info.plist */,
 			);
 			path = Cafe;
-			sourceTree = "<group>";
-		};
-		E01F104E27D47F2700EA62C0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E80BE1127D485E5004F77C1 /* Cafe.swift in Sources */,
+				1E80BE1427D4861B004F77C1 /* Customer.swift in Sources */,
 				E01F103F27D47C5400EA62C0 /* CafeViewController.swift in Sources */,
+				1E80BE1627D48635004F77C1 /* Cashier.swift in Sources */,
+				1E80BE1827D48639004F77C1 /* Manager.swift in Sources */,
+				1E80BE1C27D4878C004F77C1 /* Coffee.swift in Sources */,
 				E01F103B27D47C5400EA62C0 /* AppDelegate.swift in Sources */,
+				1E80BE1A27D4863E004F77C1 /* Barista.swift in Sources */,
 				E01F103D27D47C5400EA62C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +319,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -324,7 +349,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
