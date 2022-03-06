@@ -7,19 +7,13 @@
 
 import Foundation
 
-enum Coffee: Int {
-    case americano = 3000
-    case caramel = 3500
-    case capuccino = 4000
-    case espresso = 2000
+
+class Coffee : Menu {
 }
 
-//class Coffee {
-//    private var name: String
-//    private var price: Int
-//
-//    init(name: String, price: Int) {
-//        self.name = name
-//        self.price = price
-//    }
+//enum Coffee: Int {
+//    case americano = 3000
+//    case caramel = 3500
+//    case capuccino = 4000
+//    case espresso = 2000
 //}

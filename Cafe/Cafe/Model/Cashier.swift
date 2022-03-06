@@ -9,4 +9,9 @@ import Foundation
 
 class Cashier {
     
+    func returnChange(menu: Menu, amount: Int) -> Int{
+        return amount - menu.price
+    }
+    
+    // func 커피반환
 }

@@ -19,6 +19,8 @@
 		E01F104227D47C5400EA62C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01F104027D47C5400EA62C0 /* Main.storyboard */; };
 		E01F104427D47C5500EA62C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01F104327D47C5500EA62C0 /* Assets.xcassets */; };
 		E01F104727D47C5500EA62C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01F104527D47C5500EA62C0 /* LaunchScreen.storyboard */; };
+		F5D0F78E27D48B2100A52F7C /* Orderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F78D27D48B2100A52F7C /* Orderable.swift */; };
+		F5D0F79027D48C2800A52F7C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F78F27D48C2800A52F7C /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E01F104327D47C5500EA62C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E01F104627D47C5500EA62C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E01F104827D47C5500EA62C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D0F78D27D48B2100A52F7C /* Orderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orderable.swift; sourceTree = "<group>"; };
+		F5D0F78F27D48C2800A52F7C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				1E80BE1527D48635004F77C1 /* Cashier.swift */,
 				1E80BE1727D48639004F77C1 /* Manager.swift */,
 				1E80BE1927D4863E004F77C1 /* Barista.swift */,
+				F5D0F78D27D48B2100A52F7C /* Orderable.swift */,
+				F5D0F78F27D48C2800A52F7C /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			files = (
 				1E80BE1127D485E5004F77C1 /* Cafe.swift in Sources */,
 				1E80BE1427D4861B004F77C1 /* Customer.swift in Sources */,
+				F5D0F78E27D48B2100A52F7C /* Orderable.swift in Sources */,
 				E01F103F27D47C5400EA62C0 /* CafeViewController.swift in Sources */,
 				1E80BE1627D48635004F77C1 /* Cashier.swift in Sources */,
+				F5D0F79027D48C2800A52F7C /* Menu.swift in Sources */,
 				1E80BE1827D48639004F77C1 /* Manager.swift in Sources */,
 				1E80BE1C27D4878C004F77C1 /* Coffee.swift in Sources */,
 				E01F103B27D47C5400EA62C0 /* AppDelegate.swift in Sources */,

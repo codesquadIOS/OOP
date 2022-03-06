@@ -9,9 +9,11 @@ import Foundation
 
 class Customer {
     
-    private var orderList: [Coffee]
-    private var order: Coffee
+    private var orderList: [Coffee]? 
+    private var menu: Coffee?
     
-    func order(coffee: [Coffee]) ->
+    func makeOrder() {
+        
+    }
      
 }
