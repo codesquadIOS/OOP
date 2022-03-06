@@ -12,7 +12,7 @@ class Barista {
     private var recievedOrder : Order = Order()
     private var completedOrder : Order = Order()
     
-     func makeBeverage () -> Beverage {
+    private func makeBeverage () -> Beverage {
         let targetBeverage = recievedOrder.popFirstBeverage()
         return targetBeverage
     }
