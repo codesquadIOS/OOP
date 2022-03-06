@@ -9,10 +9,17 @@ import Foundation
 
 class Customer {
     
-    private var orderList: [Coffee]? 
-    private var menu: Coffee?
+    private var menuList: [Menu]
     
-    func makeOrder() {
+    init(menuList: [Menu]) {
+        self.menuList = menuList
+    }
+    
+    func makeOrder() -> [Menu] {
+        return self.menuList
+    }
+    
+    func 캐셔에게전달(menuList: [Menu], to cashier: Cashier) {
         
     }
      

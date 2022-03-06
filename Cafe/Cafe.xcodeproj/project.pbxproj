@@ -58,6 +58,7 @@
 		1E80BE1227D485EB004F77C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0F78F27D48C2800A52F7C /* Menu.swift */,
 				1E80BE1B27D4878C004F77C1 /* Coffee.swift */,
 				1E80BE1027D485E5004F77C1 /* Cafe.swift */,
 				1E80BE1327D4861B004F77C1 /* Customer.swift */,
@@ -65,7 +66,6 @@
 				1E80BE1727D48639004F77C1 /* Manager.swift */,
 				1E80BE1927D4863E004F77C1 /* Barista.swift */,
 				F5D0F78D27D48B2100A52F7C /* Orderable.swift */,
-				F5D0F78F27D48C2800A52F7C /* Menu.swift */,
 				D037747027D49282008D0934 /* BaristaStatus.swift */,
 			);
 			path = Model;

@@ -13,17 +13,12 @@ class Cafe {
     private var customerList: [Customer]
     
     private var cashier: Cashier
-    private var manager: Manager
-    private var barista: Barista
+    
     
     init(customer :Customer) {
         self.customer = customer
         self.cashier = Cashier()
-        self.manager = Manager()
-        self.barista = Barista()
     }
-    
-    
     
     
     
