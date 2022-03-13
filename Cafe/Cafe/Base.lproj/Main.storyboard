@@ -47,11 +47,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                        <connections>
+                                                            <action selector="americanoPlusButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGY-k1-9JG"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfg-XH-ep3">
                                                         <rect key="frame" x="69" y="0.0" width="49" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                        <connections>
+                                                            <action selector="americanoMinusButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDK-NY-liz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -80,11 +86,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                        <connections>
+                                                            <action selector="cafelattePlusButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUK-Yb-9f7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp9-ZR-pJB">
                                                         <rect key="frame" x="69" y="0.0" width="49" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                        <connections>
+                                                            <action selector="cafelateMinusButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEf-cK-kPp"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <viewLayoutGuide key="safeArea" id="hCK-Jf-ztt"/>
@@ -114,11 +126,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                        <connections>
+                                                            <action selector="prapuccinoPlusButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nm-WA-lQx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEo-Ui-xrf">
                                                         <rect key="frame" x="69" y="0.0" width="49" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                        <connections>
+                                                            <action selector="prapuccinoMinusButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2i-Sz-lft"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <viewLayoutGuide key="safeArea" id="bPL-E8-BW5"/>
@@ -131,7 +149,17 @@
                                 <rect key="frame" x="30" y="781" width="354" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="주문하기"/>
+                                <connections>
+                                    <action selector="placeOrerButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vG9-4H-hRa"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3q-Tq-NIE">
+                                <rect key="frame" x="186" y="641" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,6 +178,12 @@
                             <constraint firstItem="s5q-zi-UFA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEV-DD-ef3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="americanoCountLabel" destination="kto-F5-Ta4" id="KBN-ai-VVe"/>
+                        <outlet property="amountSumLabel" destination="I3q-Tq-NIE" id="0Ul-sx-KXB"/>
+                        <outlet property="cafelatteCountLabel" destination="qvd-VK-hfT" id="BXk-d4-66o"/>
+                        <outlet property="prapuccinoCountLabel" destination="pT7-OX-pd4" id="J7R-cV-DA9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
