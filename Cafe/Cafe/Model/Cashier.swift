@@ -7,10 +7,6 @@ class Cashier {
         self.receivedOrder.append(id)
     }
     
-    func receiveCompletedBeverage(beverages: Order) -> [Beverage] {
-        return [Beverage.coffee]
-    }
-    
     func deliverOrder() -> [Int] {
         return self.receivedOrder
     }

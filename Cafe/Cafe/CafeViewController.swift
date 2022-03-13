@@ -71,51 +71,51 @@ class CafeViewController: UIViewController {
         return button
     }()
     
-    var americanoLabel: UILabel {
+    var americanoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "아메리카노"
         return label
-    }
-    var cafeLatteLabel: UILabel {
+    }()
+    var cafeLatteLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "카페라떼"
         return label
-    }
-    var frappuccinoLabel: UILabel {
+    }()
+    var frappuccinoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "프라푸치노"
         return label
-    }
-    var americanoCountLabel : UILabel {
+    }()
+    var americanoCountLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "1"
         return label
-    }
+    }()
     
-    var cafeLatteCountLabel : UILabel {
+    var cafeLatteCountLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "1"
         return label
-    }
+    }()
     
-    var frappuccinoCountLabel : UILabel {
+    var frappuccinoCountLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "1"
         return label
-    }
+    }()
     
-    var resultLabel: UILabel {
+    var resultLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = ""
+        label.text = "asdfasefasfse"
         return label
-    }
+    }()
     
     private let model = Cafe()
     
@@ -165,9 +165,8 @@ class CafeViewController: UIViewController {
         ])
         informationStack.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 30).isActive = true
         informationStack.rightAnchor.constraint(equalTo: safeAreaGuide.rightAnchor, constant: -30).isActive = true
-        
-        
-        orderButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: 10).isActive = true
+        informationStack.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: -50).isActive=true
+
     }
     
     @objc func touchMenusButton(_ sender: UIButton) {
@@ -189,5 +188,12 @@ class CafeViewController: UIViewController {
 
 extension CafeViewController: CafeDelegate {
     func cafe(didProcess order: [Beverage]) {
+        let americanoCount = order.filter{$0 == .americano}.count
+        let cafelatteCount = order.filter{$0 == .cafeLatte}.count
+        let frappuccinoCount = order.filter{$0 == .frappuccino}.count
+        var americano : String = "아메리카노 \(americanoCount)잔"
+        var cafeLatte : String = "카페라떼 \(cafelatteCount)잔"
+        var frappuccino : String = "프라푸치노 \(frappuccinoCount)잔"
+        self.resultLabel.text = americano + cafeLatte + frappuccino
     }
 }
