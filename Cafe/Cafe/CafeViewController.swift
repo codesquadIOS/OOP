@@ -38,6 +38,7 @@ class CafeViewController: UIViewController {
         button.setTitle(" 아메리카노 ", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .systemGray3
+        button.addAction(UIAction(), for: .touchUpInside)
         return button
     }()
     
@@ -86,6 +87,9 @@ class CafeViewController: UIViewController {
         buyStackView.addArrangedSubview(cafeLatteButton)
         buyStackView.addArrangedSubview(FrappuccinoButton)
     }
-
+    var receiveMenu: () -> Void = {
+        
+    }
+    textField.addAction(UIAction(title: "", handler: { action in let textField = action.sender as! UITextField print("Text is \(textField.text)") }), for: .editingChanged)
 }
 
