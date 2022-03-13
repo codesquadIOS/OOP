@@ -151,23 +151,41 @@ class CafeViewController: UIViewController {
         buyStackView.addArrangedSubview(cafeLatteButton)
         buyStackView.addArrangedSubview(frappuccinoButton)
         
-        orderButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: 10).isActive = true
-        orderButton.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 20).isActive = true
-        orderButton.rightAnchor.constraint(equalTo: safeAreaGuide.rightAnchor, constant: -20).isActive = true
+        //
+        let americanoStack = makeStackView([americanoLabel, americanoCountLabel])
+        let cafeLatteStack = makeStackView([cafeLatteLabel, cafeLatteCountLabel])
+        let frappuccinoLabelStack = makeStackView([frappuccinoLabel, frappuccinoCountLabel])
+        let coffeListStack = makeStackView([americanoStack, cafeLatteStack, frappuccinoLabelStack], axis: .vertical)
+        let informationStack = makeStackView([coffeListStack,orderButton], axis: .vertical)
+        view.addSubview(informationStack)
+        NSLayoutConstraint.activate([
+        ])
         
-        americanoLabel.topAnchor.constraint(equalTo: guestView.bottomAnchor, constant: 10).isActive = true
-        americanoLabel.leftAnchor.constraint(equalTo: guestView.leftAnchor).isActive = true
-        americanoLabel.rightAnchor.constraint(equalTo: guestView.rightAnchor).isActive = true
-        cafeLatteLabel.topAnchor.constraint(equalTo: americanoLabel.bottomAnchor, constant: 10).isActive = true
-        cafeLatteLabel.leftAnchor.constraint(equalTo: americanoLabel.leftAnchor).isActive = true
-        cafeLatteLabel.rightAnchor.constraint(equalTo: americanoLabel.rightAnchor).isActive = true
-        frappuccinoLabel.topAnchor.constraint(equalTo: cafeLatteLabel.bottomAnchor, constant: 10).isActive = true
-        frappuccinoLabel.leftAnchor.constraint(equalTo: cafeLatteLabel.leftAnchor).isActive = true
-        frappuccinoLabel.rightAnchor.constraint(equalTo: cafeLatteLabel.rightAnchor).isActive = true
+        
+        orderButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: 10).isActive = true
+//        orderButton.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 20).isActive = true
+//        orderButton.rightAnchor.constraint(equalTo: safeAreaGuide.rightAnchor, constant: -20).isActive = true
+//
+//        americanoLabel.topAnchor.constraint(equalTo: guestView.bottomAnchor, constant: 10).isActive = true
+//        americanoLabel.leftAnchor.constraint(equalTo: guestView.leftAnchor).isActive = true
+//        americanoLabel.rightAnchor.constraint(equalTo: guestView.rightAnchor).isActive = true
+//        cafeLatteLabel.topAnchor.constraint(equalTo: americanoLabel.bottomAnchor, constant: 10).isActive = true
+//        cafeLatteLabel.leftAnchor.constraint(equalTo: americanoLabel.leftAnchor).isActive = true
+//        cafeLatteLabel.rightAnchor.constraint(equalTo: americanoLabel.rightAnchor).isActive = true
+//        frappuccinoLabel.topAnchor.constraint(equalTo: cafeLatteLabel.bottomAnchor, constant: 10).isActive = true
+//        frappuccinoLabel.leftAnchor.constraint(equalTo: cafeLatteLabel.leftAnchor).isActive = true
+//        frappuccinoLabel.rightAnchor.constraint(equalTo: cafeLatteLabel.rightAnchor).isActive = true
     }
     
     @objc func touchMenusButton(_ sender: UIButton) {
         model.receiveMenu(id:sender.tag)
+    }
+    
+    private func makeStackView(_ views: [UIView], axis: NSLayoutConstraint.Axis = .horizontal) -> UIStackView {
+        let stack = UIStackView(arrangedSubviews: views)
+        stack.axis = axis
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
     }
 }
 
