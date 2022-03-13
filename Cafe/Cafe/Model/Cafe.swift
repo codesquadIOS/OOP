@@ -9,7 +9,7 @@ import Foundation
 
 protocol CafeDelegate {
     func didMakeMenus(menu: [Menu])
-    func update(item: Menu.Item, count: Int)
+    func update(id: Int, count: Int)
     func update(totalPrice: Int)
 }
 
@@ -17,13 +17,13 @@ class Cafe {
     var delegate: CafeDelegate?
     
     private let menu: [Menu]
-    private var order: [Menu.Item: Int] = [:]
+    private var order: [Int: Int] = [:]
     
     init() {
         menu = [
-            Menu(item: .americano, price: 1000),
-            Menu(item: .cafeLatte, price: 2000),
-            Menu(item: .frappuccino, price: 3000)
+            Menu(id: 0, name: "아메리카노", price: 1000),
+            Menu(id: 1, name: "카메라떼", price: 2000),
+            Menu(id: 2, name: "프라프치노", price: 3000)
         ]
     }
     
@@ -31,18 +31,18 @@ class Cafe {
         self.delegate?.didMakeMenus(menu: self.menu )
     }
     
-    func addMenuCount(item: Menu.Item, addCount: Int) {
-        var count = (order[item] ?? 0) + addCount
+    func addMenuCount(id: Int, addCount: Int) {
+        var count = (order[id] ?? 0) + addCount
         count = count < 0 ? 0 : count
-        order[item] = count
-        self.delegate?.update(item: item, count: Int(count))
+        order[id] = count
+        self.delegate?.update(id: id, count: Int(count))
         totalPrice()
     }
     
     private func totalPrice() {
         var totalPrice = 0
-        order.forEach { item, count in
-            guard let menu = menu.filter({ $0.item == item}).first else {
+        order.forEach { id, count in
+            guard let menu = menu.filter({ $0.id == id}).first else {
                 return
             }
             

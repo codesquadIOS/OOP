@@ -54,11 +54,13 @@ class MenuItemView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        attribute()
         layout()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        attribute()
         layout()
     }
     
@@ -108,7 +110,7 @@ class MenuItemView: UIView {
     }
     
     func update(menu: Menu) {
-        name.text = menu.item.name
+        name.text = menu.name
         price.text = "\(menu.price)"
     }
     

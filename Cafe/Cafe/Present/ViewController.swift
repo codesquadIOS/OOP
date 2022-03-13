@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }()
     
     private let cafe = Cafe()
-    private var menu: [Menu.Item: MenuItemView] = [:]
+    private var menu: [Int: MenuItemView] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +62,8 @@ extension ViewController: CafeDelegate {
         self.totalPrice.text = "주문금액: \(totalPrice)"
     }
     
-    func update(item: Menu.Item, count: Int) {
-        self.menu[item]?.update(count: count)
+    func update(id: Int, count: Int) {
+        self.menu[id]?.update(count: count)
     }
     
     func didMakeMenus(menu: [Menu]) {
@@ -72,10 +72,10 @@ extension ViewController: CafeDelegate {
             menuStackView.addArrangedSubview(menuItemView)
             menuItemView.translatesAutoresizingMaskIntoConstraints = false
             menuItemView.bind { addCount in
-                self.cafe.addMenuCount(item: menu.item, addCount: addCount)
+                self.cafe.addMenuCount(id: menu.id, addCount: addCount)
             }
             menuItemView.update(menu: menu)
-            self.menu[menu.item] = menuItemView
+            self.menu[menu.id] = menuItemView
         }
     }
 }
