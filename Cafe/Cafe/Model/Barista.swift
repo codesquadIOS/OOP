@@ -7,15 +7,15 @@
 
 import Foundation
 
-class Barista {
-    private var menu: Menu
-    private var status: BaristaStatus
-    
-    func receiveMenu(menu: Menu) {
-        
-    }
-    
-    func returnCurrentStatus() -> BaristaStatus {
-        return self.status
-    }
-}
+//class Barista {
+//    private var menu: Menu
+//    private var status: BaristaStatus
+//
+//    func receiveMenu(menu: Menu) {
+//
+//    }
+//
+//    func returnCurrentStatus() -> BaristaStatus {
+//        return self.status
+//    }
+//}

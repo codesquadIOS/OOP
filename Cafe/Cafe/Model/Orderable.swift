@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Orderable {
-    var name: String { get }
-    var price: Int { get }
-}
+//protocol Orderable {
+//    var name: String { get }
+//    var price: Int { get }
+//}

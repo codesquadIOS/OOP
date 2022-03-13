@@ -9,29 +9,44 @@ import UIKit
 
 class CafeViewController: UIViewController {
 
+    
+//    let menuLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "메뉴"
+//        label.backgroundColor = .systemGray6
+//        return label
+//    }()
+    
+    
+    
+
+
+
+
     let guestView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemGray6
         return view
     }()
-    
+
     let guestName: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.text = "손님"
+        label.text = "메뉴"
         return label
     }()
-    
+
     let buyStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.backgroundColor = .clear
+        stackView.alignment = .center
         stackView.spacing = 5
         return stackView
     }()
-    
+
     let americanoButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +55,7 @@ class CafeViewController: UIViewController {
         button.backgroundColor = .systemGray3
         return button
     }()
-    
+
     let cafeLatteButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +64,7 @@ class CafeViewController: UIViewController {
         button.backgroundColor = .systemGray3
         return button
     }()
-    
+
     let FrappuccinoButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false

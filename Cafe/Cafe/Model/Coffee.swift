@@ -12,8 +12,9 @@ enum Coffee {
     case caramel
     case capuccino
     case espresso
+    
     var price: Int {
-        switch self {
+        switch(self) {
         case .americano :
             return 4000
         case .caramel :

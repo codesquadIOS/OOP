@@ -8,9 +8,15 @@
 import Foundation
 
 class Cashier {
-    func returnChange(order: Order) -> Int {
-        return order.amount - order.customerOrder.price
+    private func calculateAmountSum(orders: [Order]) -> Int {
+        var sum = 0
+        for order in orders {
+            sum += order.amount
+        }
+        return sum
     }
     
-    func placeOrder
+    func returnChange(orders: [Order], customerInput amount: Int) -> Int {
+        return calculateAmountSum(orders: orders) - amount
+    }
 }

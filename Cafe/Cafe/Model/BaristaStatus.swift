@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BaristaStatus {
-    case busy
-    case idle
-}
+//enum BaristaStatus {
+//    case busy
+//    case idle
+//}
