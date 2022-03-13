@@ -92,21 +92,21 @@ class CafeViewController: UIViewController {
     var americanoCountLabel : UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = ""
+        label.text = "1"
         return label
     }
     
     var cafeLatteCountLabel : UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = ""
+        label.text = "1"
         return label
     }
     
     var frappuccinoCountLabel : UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = ""
+        label.text = "1"
         return label
     }
     
@@ -127,12 +127,6 @@ class CafeViewController: UIViewController {
         self.guestView.addSubview(guestName)
         self.guestView.addSubview(buyStackView)
         self.guestView.addSubview(buyStackView)
-        self.view.addSubview(americanoLabel)
-        self.view.addSubview(americanoCountLabel)
-        self.view.addSubview(cafeLatteLabel)
-        self.view.addSubview(cafeLatteCountLabel)
-        self.view.addSubview(frappuccinoLabel)
-        self.view.addSubview(frappuccinoCountLabel)
         
         
         guestView.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 10).isActive = true
@@ -160,6 +154,8 @@ class CafeViewController: UIViewController {
         view.addSubview(informationStack)
         NSLayoutConstraint.activate([
         ])
+        informationStack.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 30).isActive = true
+        informationStack.rightAnchor.constraint(equalTo: safeAreaGuide.rightAnchor, constant: -30).isActive = true
         
         
         orderButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: 10).isActive = true
