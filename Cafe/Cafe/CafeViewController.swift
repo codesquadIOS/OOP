@@ -8,17 +8,17 @@
 import UIKit
 
 class CafeViewController: UIViewController {
-
+//    let menuState = MenuState(americanoState: <#T##AmericanoState#>, cafelatteState: <#T##CafelatteState#>)
+    
     @IBOutlet weak var americanoCountLabel: UILabel!
     
     @IBOutlet weak var cafelatteCountLabel: UILabel!
-    
-    @IBOutlet weak var prapuccinoCountLabel: UILabel!
     
     @IBOutlet weak var amountSumLabel: UILabel!
     
     
     @IBAction func americanoPlusButtonTouched(_ sender: Any) {
+        menuState.ameri
     }
 
     @IBAction func americanoMinusButtonTouched(_ sender: Any) {
@@ -32,13 +32,6 @@ class CafeViewController: UIViewController {
     }
     
     
-    @IBAction func prapuccinoPlusButtonTouched(_ sender: Any) {
-    }
-    
-    @IBAction func prapuccinoMinusButtonTouched(_ sender: Any) {
-    }
-    
-    
     @IBAction func placeOrerButtonTouched(_ sender: Any) {
         
     }
@@ -47,6 +40,13 @@ class CafeViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
 }
+
+
+extension CafeViewController: MenuStateDelegate {
+    func americanoCountDidPlus() {
+        <#code#>
+    }
+}
+
 
