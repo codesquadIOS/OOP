@@ -8,8 +8,6 @@
 import Foundation
 
 class Manager {
-    private var barista: Barista
-    
     func receiveCoffee(type: Coffee) {
         self.menu.append(menu)
     }

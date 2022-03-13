@@ -8,19 +8,14 @@
 import Foundation
 
 class Customer {
+    private(set) var id: Int
+    private var orders: [Order]
     
-    private var menuList: [Menu]
-    
-    init(menuList: [Menu]) {
-        self.menuList = menuList
+    init(orders: [Order]) {
+        self.orders = orders
     }
     
-    func makeOrder() -> [Menu] {
-        return self.menuList
+    func makeOrder() -> [Order] {
+        return self.orders
     }
-    
-    func 캐셔에게전달(menuList: [Menu], to cashier: Cashier) {
-        
-    }
-     
 }
