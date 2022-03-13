@@ -63,12 +63,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E80BE1227D485EB004F77C1 /* Model */ = {
+		1E76EA3E27DDE0EA009FE0BF /* etc */ = {
 			isa = PBXGroup;
 			children = (
-				1E76EA3C27DDC942009FE0BF /* MenuStateDelegate.swift */,
-				1E76EA3827DDC7E7009FE0BF /* MenuState.swift */,
-				1E76EA3627DDC791009FE0BF /* AmericacoState.swift */,
 				1E76EA3A27DDC7FF009FE0BF /* CafelatteState.swift */,
 				F5D0F78F27D48C2800A52F7C /* Coffee.swift */,
 				1E80BE1027D485E5004F77C1 /* Cafe.swift */,
@@ -79,6 +76,16 @@
 				1E80BE1927D4863E004F77C1 /* Barista.swift */,
 				F5D0F78D27D48B2100A52F7C /* Orderable.swift */,
 				D037747027D49282008D0934 /* BaristaStatus.swift */,
+			);
+			path = etc;
+			sourceTree = "<group>";
+		};
+		1E80BE1227D485EB004F77C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E76EA3C27DDC942009FE0BF /* MenuStateDelegate.swift */,
+				1E76EA3827DDC7E7009FE0BF /* MenuState.swift */,
+				1E76EA3627DDC791009FE0BF /* AmericacoState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 				E01F103A27D47C5400EA62C0 /* AppDelegate.swift */,
 				E01F103C27D47C5400EA62C0 /* SceneDelegate.swift */,
 				E01F103E27D47C5400EA62C0 /* CafeViewController.swift */,
+				1E76EA3E27DDE0EA009FE0BF /* etc */,
 				1E80BE1227D485EB004F77C1 /* Model */,
 				E01F104027D47C5400EA62C0 /* Main.storyboard */,
 				E01F104327D47C5500EA62C0 /* Assets.xcassets */,
