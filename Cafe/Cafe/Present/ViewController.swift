@@ -72,7 +72,7 @@ extension ViewController: CafeDelegate {
             menuStackView.addArrangedSubview(menuItemView)
             menuItemView.translatesAutoresizingMaskIntoConstraints = false
             menuItemView.bind { addCount in
-                self.cafe.addMenuCount(id: menu.id, addCount: addCount)
+                self.cafe.addCount(id: menu.id, addCount: addCount)
             }
             menuItemView.update(menu: menu)
             self.menu[menu.id] = menuItemView
