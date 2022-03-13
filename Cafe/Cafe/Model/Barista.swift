@@ -8,26 +8,35 @@
 import Foundation
 import UIKit
 class Barista {
-    
-    private var recievedOrder : Order = Order()
-    private var completedOrder : Order = Order()
-    
-    private func makeBeverage () -> Beverage {
-        let targetBeverage = recievedOrder.popFirstBeverage()
-        return targetBeverage
-    }
-    
-     func recieveOrder(order : Order) {
-        self.recievedOrder = order
-    }
-    
-     func processOrder() -> Order {
-        while !self.recievedOrder.isEmpty {
-            let madeBeverage = makeBeverage()
-            completedOrder.appendBeverage(beverage: madeBeverage)
+        
+    private func makeBeverage (id : Int) -> Beverage? {
+        
+        switch id {
+        case 1 :
+            return Beverage.coffee
+        case 2 :
+            return Beverage.cafeLatte
+        case 3 :
+            return Beverage.frappuccino
+        default :
+            return nil
         }
-        return self.completedOrder
+        
     }
+    
+    
+    func processOrder(order : [Int]) -> [Beverage] {
+        var recievedOrder = order
+        var completedOrder : [Beverage] = []
+        while !recievedOrder.isEmpty {
+            let order = recievedOrder.removeFirst()
+            if let madeBeverage = makeBeverage(id: order) {
+                completedOrder.append(madeBeverage)
+            }
+        }
+        return completedOrder
+    }
+    
 }
 
 /**

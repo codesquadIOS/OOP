@@ -1,14 +1,16 @@
 import Foundation
 
-struct Cafe {
+class Cafe {
     private let rosa = Cashier()
     private let kai = Barista()
+    private var completedOrder : [Beverage] = []
     
     func receiveMenu(id: Int) {
         rosa.receiveMenu(id: id)
     }
     
     func receiveOrder() {
-        rosa.deliverOrder()
+        let order = rosa.deliverOrder()
+        self.completedOrder = kai.processOrder(order: order)
     }
 }
