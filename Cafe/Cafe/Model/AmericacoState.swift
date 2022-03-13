@@ -10,6 +10,7 @@ import Foundation
 struct AmericanoState {
     
     private(set) var count: Int = 0
+    let price = 3000
     
     mutating func plusCount() {
         count += 1

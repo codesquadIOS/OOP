@@ -20,28 +20,32 @@ struct MenuState {
     mutating func plusAmericanoCount() {
         americanoState.plusCount() //+1
         delegate?.americanoCountDidChange(count: americanoState.count)
+        calculateAmount()
     }
     
     mutating func minusAmericanoCount() {
         americanoState.minusCount()
         delegate?.americanoCountDidChange(count: americanoState.count)
+        calculateAmount()
     }
     
     mutating func plusCafelatteCount() {
         cafelatteState.plusCount()
-//        delegate?.cafelatteCountDidPlus(count: cafelatteState.count)
         delegate?.cafelatteCountDidChange(count: cafelatteState.count)
+        calculateAmount()
     }
     
     mutating func minusCafelatteCount() {
         cafelatteState.minusCount()
-//        delegate?.cafelatteCountDidMinus(count: cafelatteState.count)
         delegate?.cafelatteCountDidChange(count: cafelatteState.count)
+        calculateAmount()
     }
     
     mutating func calculateAmount() {
-        
+        let americanoAmount = americanoState.count * americanoState.price
+        let cafelattemAmount = cafelatteState.count * cafelatteState.price
+        let totalPrice = americanoAmount + cafelattemAmount
+        delegate?.totalPriceDidCalculate(amount: totalPrice)
     }
-    
 }
 

@@ -37,7 +37,7 @@ class CafeViewController: UIViewController {
     
     
     @IBAction func placeOrerButtonTouched(_ sender: Any) {
-        
+        menuState.calculateAmount()
     }
     
     override func viewDidLoad() {
@@ -48,6 +48,10 @@ class CafeViewController: UIViewController {
 }
 
 extension CafeViewController: MenuStateDelegate {
+    func totalPriceDidCalculate(amount: Int) {
+        amountSumLabel.text = "\(amount)"
+    }
+    
     func cafelatteCountDidChange(count: Int) {
         cafelatteCountLabel.text = "\(count)"
     }
