@@ -9,7 +9,7 @@ import Foundation
 
 struct CafelatteState {
     
-    private var count: Int = 0
+    private(set) var count: Int = 0
     
     mutating func plusCount() {
         count += 1

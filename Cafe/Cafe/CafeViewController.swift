@@ -28,7 +28,7 @@ class CafeViewController: UIViewController {
     }
     
     @IBAction func cafelattePlusButtonTouched(_ sender: Any) {
-        menuState.plusAmericanoCount()
+        menuState.plusCafelatteCount()
     }
     
     @IBAction func cafelateMinusButtonTouched(_ sender: Any) {
@@ -43,20 +43,16 @@ class CafeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuState.delegate = self
+        menuState.delegate = self //"menustate의 심부름꾼은 내가 할게"
     }
 }
-
 
 extension CafeViewController: MenuStateDelegate {
-    
-    func americanoCountDidPlus(count: Int) {
-        americanoCountLabel.text = "\(count)"
+    func cafelatteCountDidChange(count: Int) {
+        cafelatteCountLabel.text = "\(count)"
     }
     
-    func americanoCountDidMinus(count: Int) {
+    func americanoCountDidChange(count: Int) {
         americanoCountLabel.text = "\(count)"
     }
 }
-
-

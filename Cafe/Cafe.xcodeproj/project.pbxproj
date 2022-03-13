@@ -66,10 +66,10 @@
 		1E80BE1227D485EB004F77C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1E76EA3627DDC791009FE0BF /* AmericacoState.swift */,
 				1E76EA3C27DDC942009FE0BF /* MenuStateDelegate.swift */,
-				1E76EA3A27DDC7FF009FE0BF /* CafelatteState.swift */,
 				1E76EA3827DDC7E7009FE0BF /* MenuState.swift */,
+				1E76EA3627DDC791009FE0BF /* AmericacoState.swift */,
+				1E76EA3A27DDC7FF009FE0BF /* CafelatteState.swift */,
 				F5D0F78F27D48C2800A52F7C /* Coffee.swift */,
 				1E80BE1027D485E5004F77C1 /* Cafe.swift */,
 				F5D0F79127D49DE300A52F7C /* Order.swift */,
