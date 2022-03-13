@@ -62,6 +62,54 @@ class CafeViewController: UIViewController {
         return button
     }()
     
+    let orderButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(" 주문하기 ", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        return button
+    }()
+    
+    var americanoLabel: UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "아메리카노"
+        return label
+    }
+    var cafeLatteLabel: UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "카페라떼"
+        return label
+    }
+    var frappuccinoLabel: UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "프라푸치노"
+        return label
+    }
+    var americanoCountLabel : UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = ""
+        return label
+    }
+    
+    var cafeLatteCountLabel : UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = ""
+        return label
+    }
+    
+    var frappuccinoCountLabel : UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = ""
+        return label
+    }
+    
     private let model = Cafe()
     
     override func viewDidLoad() {
@@ -75,8 +123,17 @@ class CafeViewController: UIViewController {
     func layout() {
         let safeAreaGuide = self.view.safeAreaLayoutGuide
         self.view.addSubview(guestView)
+        self.view.addSubview(orderButton)
         self.guestView.addSubview(guestName)
         self.guestView.addSubview(buyStackView)
+        self.guestView.addSubview(buyStackView)
+        self.view.addSubview(americanoLabel)
+        self.view.addSubview(americanoCountLabel)
+        self.view.addSubview(cafeLatteLabel)
+        self.view.addSubview(cafeLatteCountLabel)
+        self.view.addSubview(frappuccinoLabel)
+        self.view.addSubview(frappuccinoCountLabel)
+        
         
         guestView.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 10).isActive = true
         guestView.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 10).isActive = true
@@ -93,6 +150,20 @@ class CafeViewController: UIViewController {
         buyStackView.addArrangedSubview(americanoButton)
         buyStackView.addArrangedSubview(cafeLatteButton)
         buyStackView.addArrangedSubview(frappuccinoButton)
+        
+        orderButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: 10).isActive = true
+        orderButton.leftAnchor.constraint(equalTo: safeAreaGuide.leftAnchor, constant: 20).isActive = true
+        orderButton.rightAnchor.constraint(equalTo: safeAreaGuide.rightAnchor, constant: -20).isActive = true
+        
+        americanoLabel.topAnchor.constraint(equalTo: guestView.bottomAnchor, constant: 10).isActive = true
+        americanoLabel.leftAnchor.constraint(equalTo: guestView.leftAnchor).isActive = true
+        americanoLabel.rightAnchor.constraint(equalTo: guestView.rightAnchor).isActive = true
+        cafeLatteLabel.topAnchor.constraint(equalTo: americanoLabel.bottomAnchor, constant: 10).isActive = true
+        cafeLatteLabel.leftAnchor.constraint(equalTo: americanoLabel.leftAnchor).isActive = true
+        cafeLatteLabel.rightAnchor.constraint(equalTo: americanoLabel.rightAnchor).isActive = true
+        frappuccinoLabel.topAnchor.constraint(equalTo: cafeLatteLabel.bottomAnchor, constant: 10).isActive = true
+        frappuccinoLabel.leftAnchor.constraint(equalTo: cafeLatteLabel.leftAnchor).isActive = true
+        frappuccinoLabel.rightAnchor.constraint(equalTo: cafeLatteLabel.rightAnchor).isActive = true
     }
     
     @objc func touchMenusButton(_ sender: UIButton) {
