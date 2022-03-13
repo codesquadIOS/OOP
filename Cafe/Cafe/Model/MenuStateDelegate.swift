@@ -8,5 +8,6 @@
 import Foundation
 
 protocol MenuStateDelegate {
-    func americanoCountDidPlus()
+    func americanoCountDidPlus(count: Int)
+    func americanoCountDidMinus(count: Int)
 }

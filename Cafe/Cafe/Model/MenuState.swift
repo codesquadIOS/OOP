@@ -7,25 +7,29 @@
 
 import Foundation
 
-class MenuState {
-    var delegate?: MenuStateDelegate
+struct MenuState {
+    var delegate: MenuStateDelegate?
     
     private var americanoState: AmericanoState = AmericanoState()
     private var cafelatteState: CafelatteState = CafelatteState()
     
-    init(americanoState: AmericanoState, cafelatteState: CafelatteState) {
-        self.americanoState = americanoState
-        self.cafelatteState = cafelatteState
-    }
-    
-    func plusAmericanoCount() {
+    mutating func plusAmericanoCount() {
         americanoState.plusCount()
-        delegate.americanoCountDidPlus()
+        delegate?.americanoCountDidPlus(count: americanoState.count)
     }
     
-    func minusAmericanoCount() {
+    mutating func minusAmericanoCount() {
         americanoState.minusCount()
+        delegate?.americanoCountDidMinus(count: americanoState.count)
     }
     
+    mutating func plusCafelatteCount() {
+        cafelatteState.plusCount()
+//        delegate?.americanoCountDidPlus()
+    }
+    
+    mutating func minusCafelatteCount() {
+        cafelatteState.minusCount()
+    }
 }
 

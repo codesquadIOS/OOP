@@ -7,15 +7,15 @@
 
 import Foundation
 
-class AmericanoState {
+struct AmericanoState {
     
-    private var count: Int = 0
+    private(set) var count: Int = 0
     
-    func plusCount() {
+    mutating func plusCount() {
         count += 1
     }
     
-    func minusCount() {
+    mutating func minusCount() {
         count -= 1
     }
 }

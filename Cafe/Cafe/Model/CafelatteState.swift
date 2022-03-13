@@ -7,15 +7,15 @@
 
 import Foundation
 
-class CafelatteState {
+struct CafelatteState {
     
     private var count: Int = 0
     
-    func plusCount() {
+    mutating func plusCount() {
         count += 1
     }
     
-    func minusCount() {
+    mutating func minusCount() {
         count -= 1
     }
     
