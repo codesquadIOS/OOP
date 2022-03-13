@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     let menuStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -76,8 +75,8 @@ extension ViewController: CafeDelegate {
             menuItemView.layer.borderWidth = 1
             menuItemView.layer.cornerRadius = 5
             menuItemView.backgroundColor = .systemGray2
-            menuItemView.bind { addValue in
-                self.cafe.addMenuCount(item: menu.item, value: addValue)
+            menuItemView.bind { addCount in
+                self.cafe.addMenuCount(item: menu.item, addCount: addCount)
             }
             menuItemView.update(menu: menu)
             self.menu[menu.item] = menuItemView

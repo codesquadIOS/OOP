@@ -9,42 +9,42 @@ import Foundation
 import UIKit
 
 class MenuItemView: UIView {
-    let name: UILabel = {
+    private let name: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         return label
     }()
     
-    let price: UILabel = {
+    private let price: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         return label
     }()
     
-    let bottomStackView: UIStackView = {
+    private let bottomStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         return stackView
     }()
     
-    let plusButton: UIButton = {
+    private let plusButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("+", for: .normal)
         return button
     }()
     
-    let minusButton: UIButton = {
+    private let minusButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("-", for: .normal)
         return button
     }()
     
-    let count: UILabel = {
+    private let count: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "0"

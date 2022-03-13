@@ -31,8 +31,8 @@ class Cafe {
         self.delegate?.didMakeMenus(menu: self.menu )
     }
     
-    func addMenuCount(item: Menu.Item, value: Int) {
-        var count = (order[item] ?? 0) + value
+    func addMenuCount(item: Menu.Item, addCount: Int) {
+        var count = (order[item] ?? 0) + addCount
         count = count < 0 ? 0 : count
         order[item] = count
         self.delegate?.update(item: item, count: Int(count))
