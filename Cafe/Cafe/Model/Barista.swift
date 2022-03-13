@@ -30,6 +30,12 @@ class Barista {
     }
 }
 
+/**
+ 주문서에 기재된 Beverage(캐셔사용)
+ 음료: 숫자
+ 
+ 실물 Beverage(바리스타)
+ */
 class Order {
     private var beverages : [Beverage] = []
     
@@ -37,13 +43,11 @@ class Order {
         self.beverages.isEmpty
     }
     
-  
-    
-     func popFirstBeverage() -> Beverage {
+    func popFirstBeverage() -> Beverage {
         return self.beverages.removeFirst()
     }
     
-     func appendBeverage(beverage: Beverage) {
+    func appendBeverage(beverage: Beverage) {
         self.beverages.append(beverage)
     }
 

@@ -5,7 +5,10 @@ struct Cafe {
     private let kai = Barista()
     
     func receiveMenu(id: Int) {
-     print(id)
-     
+        rosa.receiveMenu(id: id)
+    }
+    
+    func receiveOrder() {
+        rosa.deliverOrder()
     }
 }

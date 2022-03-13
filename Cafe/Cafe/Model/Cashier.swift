@@ -1,15 +1,17 @@
 import Foundation
 
 class Cashier {
-    var receivedOrder: Order = Order()
+    var receivedOrder = [Int]()
     
-    func receiveOrder(beverage: Beverage) -> Order {
-        self.receivedOrder.appendBeverage(beverage: beverage)
-        
-        return receivedOrder
+    func receiveMenu(id: Int) {
+        self.receivedOrder.append(id)
     }
     
     func receiveCompletedBeverage(beverages: Order) -> [Beverage] {
         return [Beverage.coffee]
+    }
+    
+    func deliverOrder() -> [Int] {
+        return self.receivedOrder
     }
 }
