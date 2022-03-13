@@ -38,7 +38,7 @@ class CafeViewController: UIViewController {
         button.setTitle(" 아메리카노 ", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .systemGray3
-        button.addAction(UIAction(), for: .touchUpInside)
+        button.tag = 1
         return button
     }()
     
@@ -48,21 +48,28 @@ class CafeViewController: UIViewController {
         button.setTitle(" 카페라떼 ", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .systemGray3
+        button.tag = 2
         return button
     }()
     
-    let FrappuccinoButton: UIButton = {
+    let frappuccinoButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(" 프라프치노 ", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .systemGray3
+        button.tag = 3
         return button
     }()
+    
+    private let model = Cafe()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
+        americanoButton.addTarget(self, action: #selector(touchMenusButton), for: .touchUpInside)
+        cafeLatteButton.addTarget(self, action: #selector(touchMenusButton), for: .touchUpInside)
+        frappuccinoButton.addTarget(self, action: #selector(touchMenusButton), for: .touchUpInside)
     }
 
     func layout() {
@@ -85,11 +92,11 @@ class CafeViewController: UIViewController {
         
         buyStackView.addArrangedSubview(americanoButton)
         buyStackView.addArrangedSubview(cafeLatteButton)
-        buyStackView.addArrangedSubview(FrappuccinoButton)
+        buyStackView.addArrangedSubview(frappuccinoButton)
     }
-    var receiveMenu: () -> Void = {
-        
+    
+    @objc func touchMenusButton(_ sender: UIButton) {
+        model.receiveMenu(id:sender.tag)
     }
-    textField.addAction(UIAction(title: "", handler: { action in let textField = action.sender as! UITextField print("Text is \(textField.text)") }), for: .editingChanged)
 }
 

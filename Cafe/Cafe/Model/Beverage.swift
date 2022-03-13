@@ -7,9 +7,8 @@
 
 import Foundation
 
-enum Beverage : String {
-    case coffee
-    case latte
-    case tea
-    
+enum Beverage : Int {
+    case coffee = 1
+    case cafeLatte
+    case frappuccino
 }
