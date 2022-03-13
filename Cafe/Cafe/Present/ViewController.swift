@@ -71,10 +71,6 @@ extension ViewController: CafeDelegate {
             let menuItemView = MenuItemView()
             menuStackView.addArrangedSubview(menuItemView)
             menuItemView.translatesAutoresizingMaskIntoConstraints = false
-            menuItemView.layer.borderColor = UIColor.black.cgColor
-            menuItemView.layer.borderWidth = 1
-            menuItemView.layer.cornerRadius = 5
-            menuItemView.backgroundColor = .systemGray2
             menuItemView.bind { addCount in
                 self.cafe.addMenuCount(item: menu.item, addCount: addCount)
             }

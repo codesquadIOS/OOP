@@ -62,6 +62,13 @@ class MenuItemView: UIView {
         layout()
     }
     
+    private func attribute() {
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 5
+        self.backgroundColor = .systemGray2
+    }
+    
     private func layout() {
         self.addSubview(name)
         self.addSubview(bottomStackView)
