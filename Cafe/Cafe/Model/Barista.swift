@@ -13,7 +13,7 @@ class Barista {
         
         switch id {
         case 1 :
-            return Beverage.coffee
+            return Beverage.americano
         case 2 :
             return Beverage.cafeLatte
         case 3 :
